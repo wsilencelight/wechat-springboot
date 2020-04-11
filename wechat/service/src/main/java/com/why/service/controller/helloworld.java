@@ -22,7 +22,7 @@ public class helloworld {
         user u = new user();
         u.setDate(new Date());
         u.setName("why");
-        u.setPassword("12345");
+        u.setPassword("123");
         return u;
     }
 

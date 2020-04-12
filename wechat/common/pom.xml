@@ -24,10 +24,10 @@
             <artifactId>spring-boot-starter</artifactId>
             <exclusions>
                 <!-- 排除springboot默认的logback日志框架 -->
-                <!-- 				<exclusion> -->
-                <!-- 					<groupId>org.springframework.boot</groupId> -->
-                <!-- 					<artifactId>spring-boot-starter-logging</artifactId> -->
-                <!-- 				</exclusion> -->
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
 
@@ -44,7 +44,7 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
-        <dependency><!-- more -->
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
@@ -64,17 +64,16 @@
         </dependency>
 
         <!-- 阿里开源数据源 -->
-        <!-- 		<dependency> -->
-        <!-- 			<groupId>com.alibaba</groupId> -->
-        <!-- 			<artifactId>druid</artifactId> -->
-        <!-- 			<version>1.1.0</version> -->
-        <!-- 		</dependency> -->
-        <!-- 		<dependency> -->
-        <!-- 			<groupId>com.alibaba</groupId> -->
-        <!-- 			<artifactId>druid-spring-boot-starter</artifactId> -->
-        <!-- 			<version>1.1.0</version> -->
-        <!-- 		</dependency> -->
-
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>druid</artifactId>-->
+<!--            <version>1.1.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>druid-spring-boot-starter</artifactId>-->
+<!--            <version>1.1.0</version>-->
+<!--        </dependency>-->
         <!-- mybatis -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -128,16 +127,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <!-- 		<dependency> -->
-        <!-- 			<groupId>redis.clients</groupId> -->
-        <!-- 			<artifactId>jedis</artifactId> -->
-        <!-- 			<version>2.9.0</version> -->
-        <!-- 		</dependency> -->
-        <!-- 		<dependency> -->
-        <!-- 			<groupId>org.springframework.data</groupId> -->
-        <!-- 			<artifactId>spring-data-redis</artifactId> -->
-        <!-- 			<version>1.8.7.RELEASE</version> -->
-        <!-- 		</dependency> -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.8.7.RELEASE</version>
+        </dependency>
 
         <!-- 引入zookeeper -->
         <dependency>

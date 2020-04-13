@@ -1,7 +1,9 @@
 package com.why.service;
 
 import com.why.pojo.Users;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface UserService {
     /**
      * 判断用户名是否已经存在

@@ -2,43 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b2cd5c4-5bb7-4e66-893b-5adb00b0cfee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_8_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/why/api/controller/RegisterLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/why/utils/JSONResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/why/utils/MD5Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/Code.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/DayCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/Id.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/IdWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/InvalidSystemClock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/RandomCodeStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/Sid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/WorkerIdStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/strategy/DayPrefixRandomCodeStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/strategy/DefaultRandomCodeStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/strategy/DefaultWorkerIdStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/strategy/FileLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/utils/HttpReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/utils/IPv4Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/utils/Ip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/utils/Props.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/utils/Serializes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/org/n3r/idworker/utils/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/why/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/why/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_liyiorg_weixin_popular_2_8_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vdurmont_emoji_java_3_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20140107.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/why/api/ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/why/api/ApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/why/api/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/why/api/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/why/api/controller/RegisterLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/why/api/controller/RegisterLoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/why/service/ServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/why/service/controller/helloworld.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/why/service/controller/helloworld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/why/service/entity/user.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/com/why/mapper/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/com/why/mapper/UsersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/why/pojo/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/why/pojo/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/why/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/why/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/why/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/why/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +137,7 @@
       <workItem from="1586596994270" duration="2439000" />
       <workItem from="1586603331051" duration="25000" />
       <workItem from="1586603589437" duration="14976000" />
-      <workItem from="1586671946527" duration="1286000" />
+      <workItem from="1586671946527" duration="24533000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1586603741685</created>
@@ -188,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586604009062</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="测试">
+      <created>1586673765753</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586673765753</updated>
+    </task>
+    <task id="LOCAL-00006" summary="完成注册借口">
+      <created>1586673822652</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586673822652</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,15 +202,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+    <MESSAGE value="完成注册借口" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成注册借口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/main/java/com/why/service/impl/UserServiceImpl.java</url>
-          <line>21</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api/src/main/java/com/why/api/controller/RegisterLoginController.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

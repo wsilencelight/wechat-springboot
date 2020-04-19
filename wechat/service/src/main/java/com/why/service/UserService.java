@@ -18,4 +18,12 @@ public interface UserService {
      */
     public void saveUser (Users user);
 
+    /**
+     * @登陆用 判断用户名密码是否匹配
+     * @param username
+     * @param password
+     * @return
+     */
+    public Users queryUserForLogin (String username, String password);
+
 }

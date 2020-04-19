@@ -10,6 +10,7 @@ import com.why.utils.MD5Utils;
 import io.netty.util.internal.StringUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.apache.catalina.User;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HeaderElement;
@@ -68,7 +69,7 @@ public class RegisterLoginController {
     }
     @PostMapping("/loginbywechat")
     //  value和notes是展示在页面上的
-    @ApiOperation(value = "登陆", notes = "用户使用微信授权登陆接口")
+    @ApiOperation(value = "微信登陆", notes = "用户使用微信授权登陆接口")
     public JSONResult userRegisterByWechat (@RequestBody Users user) throws Exception {
         // 0.先用传过来的code去请求openid,再把openid作为username存入数据库,前端暂时用id字段来当作code，后面存入数据库会覆盖掉没有影响
         // 1.判断用户名密码不为空
@@ -107,14 +108,32 @@ public class RegisterLoginController {
         if (StringUtils.isBlank(user.getUsername()) || StringUtils.isBlank(user.getPassword())) {
             return JSONResult.errorMsg("用户名密码不能为空");
         } else if (userService.queryUsernameIsExist(user.getUsername())) {
-            return JSONResult.errorMsg(("用户名已存在"));
+            // 判断用户是否在存在并返回用户
+            Users userResult = userService.queryUserForLogin(openid, MD5Utils.getMD5Str(openid));
+            userResult.setUsername("");
+            userResult.setPassword("");
+            return JSONResult.ok(userResult);
         } else {
             user.setFansCounts(0);
             user.setReceiveLikeCounts(0);
             user.setFollowCounts(0);
             userService.saveUser(user);
-            return JSONResult.ok();
+            return JSONResult.ok(user);
         }
-
+    }
+    @PostMapping("/login")
+    @ApiOperation(value = "登陆", notes = "用户名密码登录")
+    public JSONResult userLogin (@RequestBody Users user) throws Exception {
+        String username = user.getUsername();
+        String password = user.getPassword();
+        if (username.isEmpty() || password.isEmpty()) {
+            return JSONResult.errorMsg("用户名和密码不能为空");
+        }
+        Users userResult = userService.queryUserForLogin(username, MD5Utils.getMD5Str(password));
+        if (userResult == null) {
+            return JSONResult.errorMsg("用户名或密码错误");
+        }
+        userResult.setPassword("");
+        return JSONResult.ok(userResult);
     }
 }

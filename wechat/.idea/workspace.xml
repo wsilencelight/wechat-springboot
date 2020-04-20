@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b2cd5c4-5bb7-4e66-893b-5adb00b0cfee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/why/api/controller/CommonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/why/utils/RedisOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keystore.p12" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/why/pojo/VO/UsersVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/why/api/controller/RegisterLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/why/api/controller/RegisterLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/why/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/why/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/why/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/why/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/why/service/controller/helloworld.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,25 +45,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.43781096" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.why.service.impl" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/src/main/resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/common/src/main/java/com/why/utils" />
+      <recent name="$PROJECT_DIR$/common/src/main/java" />
+      <recent name="$PROJECT_DIR$/pojo/src/main/java/com/why/pojo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.why.pojo.VO" />
       <recent name="com.why.utils" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/common/src/main/java" />
-      <recent name="$PROJECT_DIR$/common/src/main/java/com/why/utils" />
-      <recent name="$PROJECT_DIR$/pojo/src/main/java/com/why/pojo" />
-      <recent name="$PROJECT_DIR$/mapper/src/main/java/com/why/mapper" />
-      <recent name="$PROJECT_DIR$/api/src/main/resources/mapper" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.why.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -128,7 +133,8 @@
       <workItem from="1586671946527" duration="24711000" />
       <workItem from="1586795096850" duration="52000" />
       <workItem from="1587035803429" duration="1146000" />
-      <workItem from="1587221665832" duration="8696000" />
+      <workItem from="1587221665832" duration="8785000" />
+      <workItem from="1587374157019" duration="7797000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1586603741685</created>
@@ -179,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586794513739</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="完善微信登陆，增加普通登陆">
+      <created>1587306702495</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587306702495</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +215,8 @@
     <MESSAGE value="测试" />
     <MESSAGE value="完成注册借口" />
     <MESSAGE value="完成使用微信登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成使用微信登录" />
+    <MESSAGE value="完善微信登陆，增加普通登陆" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善微信登陆，增加普通登陆" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -214,7 +228,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api/src/main/java/com/why/api/controller/RegisterLoginController.java</url>
-          <line>97</line>
+          <line>99</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

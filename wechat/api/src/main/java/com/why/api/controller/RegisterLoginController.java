@@ -3,6 +3,7 @@ package com.why.api.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.annotation.JsonRawValue;
 import com.why.pojo.Users;
+import com.why.pojo.VO.UsersVO;
 import com.why.service.UserService;
 import com.why.service.impl.UserServiceImpl;
 import com.why.utils.JSONResult;
@@ -21,6 +22,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,11 +31,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.annotation.Resources;
+import java.util.UUID;
 
 //tags是展示在页面上的
 @RestController
 @Api(value = "用户注册登录的接口", tags = {"注册登陆controller"})
-public class RegisterLoginController {
+public class RegisterLoginController extends CommonController {
 
     @Autowired
     private UserService userService;
@@ -54,7 +57,6 @@ public class RegisterLoginController {
         if (StringUtils.isBlank(user.getUsername()) || StringUtils.isBlank(user.getPassword())) {
             return JSONResult.errorMsg("用户名密码不能为空");
         } else if (userService.queryUsernameIsExist(user.getUsername())) {
-//            return JSONResult.ok(user);
             return JSONResult.errorMsg(("用户名已存在"));
         } else {
             user.setNickname(user.getUsername());
@@ -110,15 +112,18 @@ public class RegisterLoginController {
         } else if (userService.queryUsernameIsExist(user.getUsername())) {
             // 判断用户是否在存在并返回用户
             Users userResult = userService.queryUserForLogin(openid, MD5Utils.getMD5Str(openid));
+            // 微信用户的username就是openid，不能暴露
             userResult.setUsername("");
             userResult.setPassword("");
-            return JSONResult.ok(userResult);
+            return JSONResult.ok(setUserToken(userResult));
         } else {
             user.setFansCounts(0);
             user.setReceiveLikeCounts(0);
             user.setFollowCounts(0);
             userService.saveUser(user);
-            return JSONResult.ok(user);
+            Users userResult = userService.queryUserForLogin(openid, MD5Utils.getMD5Str(openid));
+            userResult.setUsername("");
+            return JSONResult.ok(setUserToken(userResult));
         }
     }
     @PostMapping("/login")
@@ -133,7 +138,21 @@ public class RegisterLoginController {
         if (userResult == null) {
             return JSONResult.errorMsg("用户名或密码错误");
         }
-        userResult.setPassword("");
-        return JSONResult.ok(userResult);
+        return JSONResult.ok(setUserToken(userResult));
+    }
+
+    /**
+     * 将user对象复制，并添加token字段
+     * @param user
+     * @return 返回一个usersVO
+     */
+    private UsersVO setUserToken (Users user) {
+        String token = UUID.randomUUID().toString();
+        // timeout单位是毫秒
+        redis.set(USER_REDIS_SESSION + ":" + user.getId(), token, 1000 * 60 *30);
+        UsersVO usersVO = new UsersVO();
+        BeanUtils.copyProperties(user, usersVO);
+        usersVO.setSessionToken(token);
+        return usersVO;
     }
 }
